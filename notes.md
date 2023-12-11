@@ -108,3 +108,27 @@ pub fn encode_handler(message: &mut Vec<char>, rotor: &mut Rotor) {
 
         // println!("{}", encoded_output)
 }
+
+
+
+
+
+
+// encode handler debugger
+
+*chr = rotor_i.encode(ind as isize, *chr);
+                if ind == 0 {println!("{}", chr)}
+            *chr = rotor_ii.encode(ind as isize, *chr);
+                if ind == 0 {println!("{}", chr)}
+            *chr = rotor_iii.encode(ind as isize, *chr);
+                if ind == 0 {println!("{}", chr)}
+            *chr = reflector_a.encode(*chr);
+                if ind == 0 {println!("{}", chr)}
+            // after passing through the reflector, the direction of the signal is reversed, and so instead of passing again through the rotor *input -> *output it should *output -> *input
+
+            *chr = rotor_iii.encode(ind as isize, *chr);
+                if ind == 0 {println!("{}", chr)}
+            *chr = rotor_ii.encode(ind as isize, *chr);
+                if ind == 0 {println!("{}", chr)}
+            *chr = rotor_i.encode(ind as isize, *chr);
+                if ind == 0 {println!("{}", chr)}
