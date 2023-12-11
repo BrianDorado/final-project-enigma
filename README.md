@@ -7,7 +7,7 @@ The Enigma Machine operates using a combination of rotors and a plugboard:
 
 Rotors: These are disk-like components with wiring that scrambles the alphabet. Each rotor has 26 positions, corresponding to the letters of the alphabet. The Enigma Machine typically had three or more rotors. As a key is pressed, the rotors rotate, changing the wiring path and thus the substitution for each letter.
 
-Plugboard: Before reaching the rotors, each letter input is first passed through the plugboard, which swaps certain letters. For example, if A and B are connected on the plugboard, all As will become Bs and vice versa.(Not yet implemented)
+~~Plugboard: Before reaching the rotors, each letter input is first passed through the plugboard, which swaps certain letters. For example, if A and B are connected on the plugboard, all As will become Bs and vice versa.~~(Not yet implemented)
 
 Reflector: At the end of the rotors, the signal is sent through a reflector that sends the signal back through the rotors by a different route, further scrambling the letter.
 
