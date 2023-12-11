@@ -45,12 +45,12 @@ Process Message: The emulator will process the input message through the configu
 
 5. Output: As the encrypted letter was typed, the corresponding decrypted letter would light up on the lampboard.
 
-For example - the current implementation in this code base encrypts the message "Hello" to "BCUTS". A user, ensuring he has the same initial set up as the originator would type in "BCUTS" and the word "Hello" would light up on the lampboard. 
+For example - the current implementation in this code base encrypts the message "Hello" to "BHHPV". A user, ensuring he has the same initial set up as the originator would type in "BHHPV" and the word "Hello" would light up on the lampboard. 
 
-This feature is not yet supported
+
+
 
 # TODO:
-- Decryption
 - Plugboard
 - CLI Interface allowing customiszation of rotors, reflector, interactions with the plugboard and initial position for each rotor
 - File (.txt) encryption

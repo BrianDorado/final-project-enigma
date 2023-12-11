@@ -8,6 +8,6 @@ use crate::encode_handler::encode_handler;
 fn main() {
     let ec = encode_handler(&mut collect_input());
 
-    println!("Enigma'd: {}", ec)
-     
+    println!("Enigma'd: {}", ec);
+
 }
