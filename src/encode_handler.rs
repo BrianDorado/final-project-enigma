@@ -23,17 +23,17 @@ pub fn encode_handler(message: &mut Vec<char>) -> String {
 
             // There is a better way to do this... this is just the naive initial version to get it working.
             
-            *chr = rotor_i.encode(ind as isize, *chr);
-            *chr = rotor_ii.encode(ind as isize, *chr);
-            *chr = rotor_iii.encode(ind as isize, *chr);
+            *chr = rotor_i.encode(ind as isize, *chr, true);
+            *chr = rotor_ii.encode(ind as isize, *chr, true);
+            *chr = rotor_iii.encode(ind as isize, *chr, true);
             *chr = reflector_a.encode(*chr);
-            // after passing through the reflector, the direction of the signal is reversed, and so instead of passing again through the rotor *input -> *output it should *output -> *input
+            // after passing through the reflector, the     direction of the signal is reversed, and so instead of passing again through the rotor *input -> *output it should *output -> *input
 
             // It should not return the same letter
 
-            *chr = rotor_iii.encode(ind as isize, *chr);
-            *chr = rotor_ii.encode(ind as isize, *chr);
-            *chr = rotor_i.encode(ind as isize, *chr);
+            *chr = rotor_iii.encode( ind as isize, *chr, false);
+            *chr = rotor_ii.encode( ind as isize, *chr, false);
+            *chr = rotor_i.encode( ind as isize, *chr, false);
     }
 
         message.iter().collect()

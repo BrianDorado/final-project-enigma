@@ -54,5 +54,3 @@ This feature is not yet supported
 - Plugboard
 - CLI Interface allowing customiszation of rotors, reflector, interactions with the plugboard and initial position for each rotor
 - File (.txt) encryption
-
-
