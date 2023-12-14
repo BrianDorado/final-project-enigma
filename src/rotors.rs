@@ -38,7 +38,7 @@ pub fn encode(&self, offset: isize, char_to_encode: char, forward: bool) -> char
     pub const fn new(id: char, input: [char; 26], output:[char; 26]) ->     Rotor {
 
         Rotor { 
-            id: id, 
+            id, 
             wiring: Wiring { 
                 input, 
                 output
@@ -59,27 +59,11 @@ mod tests {
     );
 
     #[test]
-    fn reflector_initialized_correclty() {
+    fn rotor_initialized_correclty() {
        
-        assert_eq!(TEST_ROTOR_V.id, '2')
-
+        assert_eq!(TEST_ROTOR_V.id, '2');
+        assert_eq!(TEST_ROTOR_V.position, 0);
+        assert_eq!(TEST_ROTOR_V.wiring.output, ['Y','R','U','H','Q','S','L','D','P','X','N','G','O','K','M','I','E','B','F','Z','C','W','V','J','A','T'])
     }
 }
 
-//     pub fn encode(&self, offset:isize, char_to_encode: char,  forward: bool) -> char {
-//         if char_to_encode.is_whitespace() {
-//                 return ' '
-//         } else {
-//             let index = if forward {
-//                 self.wiring.input.iter().position(|&c| c == char_to_encode).unwrap()
-//             } else {
-//                 self.wiring.output.iter().position(|&c| c == char_to_encode).unwrap()
-//             };
-//             // let effective_index = (index +offset as usize) % 26;
-//             if forward {
-//                 self.wiring.output[index]
-//             } else {
-//                 self.wiring.input[index]
-//             }
-//         }
-// }

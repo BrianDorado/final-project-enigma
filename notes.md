@@ -265,3 +265,27 @@ pub fn encode_handler(message: &mut Vec<char>, rotor: &mut Rotor) {
 //    | ---------- method in this implementation
 // ...
 // 19 | pub fn encode(&self, offset: isize, char_to_encode: char, forward: bool) -> char {
+
+
+
+
+
+
+
+    //     pub fn encode(&self, offset:isize, char_to_encode: char,  forward: bool) -> char {
+//         if char_to_encode.is_whitespace() {
+//                 return ' '
+//         } else {
+//             let index = if forward {
+//                 self.wiring.input.iter().position(|&c| c == char_to_encode).unwrap()
+//             } else {
+//                 self.wiring.output.iter().position(|&c| c == char_to_encode).unwrap()
+//             };
+//             // let effective_index = (index +offset as usize) % 26;
+//             if forward {
+//                 self.wiring.output[index]
+//             } else {
+//                 self.wiring.input[index]
+//             }
+//         }
+// }

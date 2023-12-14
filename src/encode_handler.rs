@@ -9,6 +9,7 @@ use initialization::{
     // REFLECTOR_B,
     // REFLECTOR_C
 };
+/// # This doc string describes the encode handler in detail
 
 #[allow(dead_code)]
 pub fn encode_handler(message: &mut Vec<char>) -> String {

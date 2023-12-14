@@ -1,3 +1,4 @@
+/// THis is a top level doc string for the reflectors file
     #[allow(dead_code)]
     struct Wiring {
         input: [char; 26],
@@ -11,6 +12,8 @@
     }
     
     impl Reflector {
+
+        /// There is now a doc string in the Reflector impl
         #[allow(dead_code)]
         pub fn encode(&mut self,char_to_encode:char) -> char {
             
@@ -33,7 +36,7 @@
         pub const fn new(id: char, input: [char; 26], output:[char; 26]) -> Reflector {
 
             Reflector { 
-                id: id, 
+                id, 
                 wiring: Wiring { 
                     input, 
                     output
@@ -46,6 +49,7 @@
 
 mod tests {
     use super::*;
+    #[allow(dead_code)]
     static TEST_REFLECTOR_B: Reflector = Reflector::new(
         '2', 
             ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'], 
@@ -55,7 +59,15 @@ mod tests {
     #[test]
     fn reflector_initialized_correclty() {
        
-        assert_eq!(TEST_REFLECTOR_B.id, '2')
+        assert_eq!(TEST_REFLECTOR_B.id, '2');
+        assert_eq!(TEST_REFLECTOR_B.wiring.input, ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
 
     }
+
+    // #[test]
+
+    // fn it_encodes_properly(){
+    //     let enc_char = TEST_REFLECTOR_B.encode('Z');
+    //     assert_eq!(enc_char, 'T')
+    // }
 }
