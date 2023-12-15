@@ -1,4 +1,5 @@
 use std::io;
+
 #[allow(dead_code)]
 pub fn collect_input() -> Vec<char> {
         let mut input = String::new(); // message to encrypt

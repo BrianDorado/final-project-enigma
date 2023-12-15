@@ -1,3 +1,5 @@
+//! This is a detailed description of the crate
+
 mod input_handler;
 use crate::input_handler::collect_input;
 
